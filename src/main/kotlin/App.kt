@@ -126,9 +126,7 @@ fun TestCase.toTxt(): String {
 
 		//Ids of the floors that this elevator stops on
 		val accessibleFloors = floors
-				.mapIndexed { index, floor ->
-					Pair(index, floor)
-				}
+				.withIndex()
 				.filter { (_, floor) ->
 					floor.elevators.contains(id)
 				}
