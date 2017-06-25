@@ -42,7 +42,7 @@ class App {
 				testCase.validate()
 
 				val outputFile = File(
-						(outputPath?.plus(inputFile.name) ?: inputFile.canonicalPath)
+						(outputPath?.suffix(File.separator)?.plus(inputFile.name) ?: inputFile.canonicalPath)
 								.removeSuffix(".yml") + ".txt")
 
 				outputFile.createNewFile()
@@ -153,3 +153,5 @@ fun TestCase.toTxt(): String {
 }
 
 fun List<String>.concat() = fold("", String::plus)
+
+fun String.suffix(s: String) = removeSuffix(s) + s
