@@ -1,0 +1,32 @@
+floors:
+  - height: 4
+    hasUpDownButton: false
+    elevators:
+      - 1
+      - 2
+
+  - height: 4
+    hasUpDownButton: true
+    elevators:
+      - 2
+
+  - height: 4
+    hasUpDownButton: false
+    elevators:
+      - 1
+
+elevators:
+  - speed: 4
+    maxLoad: 10
+    startFloor: 1 # starts at 1
+
+  - speed: 6
+    maxLoad: 10
+    startFloor: 1  # starts at 1
+
+persons:
+  - startFloor: 1 # starts at 1
+    destinationFloor: 3 # starts at 1
+    startTime: 0
+    maxWait: 20
+    weight: 2
