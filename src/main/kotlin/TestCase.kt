@@ -9,7 +9,6 @@ data class TestCase(
 
 data class Floor(
 		val height: Int = 1,
-		val hasUpDownButton: Boolean = false,
 		val elevators: List<ElevatorIndex>
 )
 
